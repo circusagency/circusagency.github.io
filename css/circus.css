@@ -1,7 +1,9 @@
 @import url(font-face.css);
 h1 {
-  font-family: "Helvetica";
-  font-size: 5vw;
+  font-family: "Futura";
+  font-size: 1.7vw;
+  font-style: italic !important;
+  letter-spacing: 1.5px;
 }
 
 @media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
@@ -23,8 +25,11 @@ h1 {
 }
 
 h2 {
-  font-family: "Helvetica";
-  font-size: 5vw;
+  font-family: "Futura";
+  font-size: 1.3vw;
+  font-style: italic !important;
+  letter-spacing: 1.5px;
+  line-height: 36px;
 }
 
 @media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
@@ -45,32 +50,58 @@ h2 {
   }
 }
 
-h3 {
-  font-family: "Helvetica";
-  font-size: 5vw;
+h3, #infoROW a {
+  font-family: "Futura";
+  font-size: 6vw;
+  letter-spacing: 2px;
+  font-weight: 500;
 }
 
 @media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
-  h3 {
+  h3, #infoROW a {
     font-size: 3vw;
   }
 }
 
 @media (min-width: 480px) and (max-width: 900px) and (orientation: landscape) {
-  h3 {
+  h3, #infoROW a {
     font-size: 2vw;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
-  h3 {
+  h3, #infoROW a {
+    font-size: 4vw;
+  }
+}
+
+h4 {
+  font-family: "Futura";
+  font-size: 1.3vw;
+}
+
+@media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
+  h4 {
+    font-size: 3vw;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 900px) and (orientation: landscape) {
+  h4 {
+    font-size: 2vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  h4 {
     font-size: 4vw;
   }
 }
 
 p {
-  font-family: "Times";
+  font-family: "Futura";
   font-size: 5vw;
+  letter-spacing: 1.2px;
 }
 
 @media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
@@ -91,193 +122,136 @@ p {
   }
 }
 
-#div1 p {
-  font-family: "Times";
-  font-size: 5vw;
+h1, h2, h3, h4, p {
+  margin: 0;
 }
 
-@media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
-  #div1 p {
-    font-size: 3vw;
-  }
+p {
+  color: linear-gradient(45deg, #fc00ff 20%, #00dbde 40%, #00dbde 60%, #fc00ff 80%);
 }
 
-@media (min-width: 480px) and (max-width: 900px) and (orientation: landscape) {
-  #div1 p {
-    font-size: 2vw;
-  }
+h1, h2, h4 {
+  color: black;
 }
 
-@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
-  #div1 p {
-    font-size: 4vw;
-  }
+.gradient {
+  color: linear-gradient(45deg, #fc00ff 20%, #00dbde 40%, #00dbde 60%, #fc00ff 80%) !important;
 }
 
-h1, h2, h3, p {
-  color: red;
-}
-
-#div h1, #div h2, #div h3, #div p {
-  color: red;
-}
-
-.bianco {
-  color: red !important;
-}
-
-.blu {
-  color: red !important;
-}
-
-.arancione {
-  color: red !important;
-}
-
-#Header a:link, #Header a:visited, #Header a:active {
-  color: red;
+a:link, a:visited, a:active {
+  background: black;
+  background-size: 200% auto;
+  color: black;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: none;
 }
 
-#Header a:hover {
-  transition: 0.4 s;
-  color: blue;
+.coloredLINK:hover {
+  background: linear-gradient(45deg, #fc00ff 20%, #00dbde 40%, #00dbde 60%, #fc00ff 80%);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
 }
 
-#header {
-  margin: 20px 10px 20px 10px;
-  padding: 20px 10px 20px 10px;
-  width: auto;
-  height: auto;
-}
-
-#logo img {
-  width: 5vw;
-  height: auto;
-}
-
-@media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
-  #logo img {
-    width: 3vw;
+@keyframes shine {
+  to {
+    background-position: 200% center;
   }
 }
 
-@media (min-width: 480px) and (max-width: 900px) and (orientation: landscape) {
-  #logo img {
-    width: 2vw;
+#navROW {
+  display: flex;
+}
+
+.logoCOL, .menuCOL {
+  width: 6%;
+  padding-top: 20px;
+}
+
+.spaceCOL {
+  width: 88%;
+  height: 120px;
+  background: transparent;
+  position: fixed;
+}
+
+.testoCOL {
+  width: 88%;
+}
+
+.testoDIV {
+  margin-top: 120px;
+  background: linear-gradient(45deg, #fc00ff 20%, #00dbde 40%, #00dbde 60%, #fc00ff 80%);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 12s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
-  #logo img {
-    width: 4vw;
-  }
+.menuCOL {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
 }
 
-#logo .style-svg {
-  fill: red;
+.logoCOL h1, .menuCOL h1 {
+  position: fixed;
 }
 
-#logo .style-svg:hover {
-  fill: red;
+.menuCOL h1 {
+  right: 16px;
 }
 
-.slicknav_menu {
-  display: none;
+.socialCOL {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
 }
 
-@media (min-width: 1px) and (max-width: 1024px) {
-  .slicknav_menu {
-    display: block;
-  }
+.menuCOL * {
+  text-align: right;
 }
 
-#menu {
-  display: block;
+#infoROW {
+  margin-top: 200px;
 }
 
-@media (min-width: 1px) and (max-width: 1024px) {
-  #menu {
-    display: none;
-  }
+#infoROW h3 {
+  margin-bottom: 35px;
 }
 
-.menu-item {
-  display: inline-block;
-  margin-left: 35px;
-  border-bottom: 2px solid transparent;
-  padding-bottom: 5px;
-  transition: 0.4s;
+#policyROW {
+  margin-top: 50px;
+  margin-bottom: 26px;
+  display: flex;
 }
 
-.menu-item:hover {
-  border-bottom: 2px solid white;
+#policyROW a {
+  margin-right: 24px;
 }
 
-#element1 {
-  margin: 20px 10px 20px 10px;
-  padding: 20px 10px 20px 10px;
-  width: auto;
-  height: auto;
+body {
+  margin: 0 !important;
+  padding: 0 16px 0px 16px;
 }
 
-#footer {
-  margin: 20px 10px 20px 10px;
-  padding: 20px 10px 20px 10px;
-  width: auto;
-  height: auto;
-}
-
-#logo2 img {
-  width: 5vw;
-  height: auto;
-}
-
-@media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
-  #logo2 img {
-    width: 3vw;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 900px) and (orientation: landscape) {
-  #logo2 img {
-    width: 2vw;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
-  #logo2 img {
-    width: 4vw;
-  }
-}
-
-.social_icon img {
-  width: 5vw;
-  height: auto;
-}
-
-@media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
-  .social_icon img {
-    width: 3vw;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 900px) and (orientation: landscape) {
-  .social_icon img {
-    width: 2vw;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
-  .social_icon img {
-    width: 4vw;
-  }
-}
-
-.social_icon .style-svg {
-  fill: red;
-}
-
-.social_icon .style-svg:hover {
-  fill: red;
+.linear-wipe {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }

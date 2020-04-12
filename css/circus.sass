@@ -13,6 +13,8 @@ h1
     font-size: nth($h1, 3)
   @media #{$tablet}
     font-size: nth($h1, 2)
+  font-style: italic!important
+  letter-spacing: 1.5px
 
 // h2
 h2
@@ -24,9 +26,12 @@ h2
     font-size: nth($h2, 3)
   @media #{$tablet}
     font-size: nth($h2, 2)
+  font-style: italic!important
+  letter-spacing: 1.5px
+  line-height: 36px
 
 // h3
-h3
+h3, #infoROW a
   font-family: nth($h3, 5)
   font-size: nth($h3, 1)
   @media #{$portrait}
@@ -35,6 +40,19 @@ h3
     font-size: nth($h3, 3)
   @media #{$tablet}
     font-size: nth($h3, 2)
+  letter-spacing: 2px
+  font-weight: 500
+
+// h4
+h4
+  font-family: nth($h4, 5)
+  font-size: nth($h4, 1)
+  @media #{$portrait}
+    font-size: nth($h4, 4)
+  @media #{$landscape}
+    font-size: nth($h4, 3)
+  @media #{$tablet}
+    font-size: nth($h4, 2)
 
 // p1
 p
@@ -46,142 +64,142 @@ p
     font-size: nth($p1, 3)
   @media #{$tablet}
     font-size: nth($p1, 2)
+  letter-spacing: 1.2px
 
-// p2
-#div1 p
-  font-family: nth($p2, 5)
-  font-size: nth($p2, 1)
-  @media #{$portrait}
-    font-size: nth($p2, 4)
-  @media #{$landscape}
-    font-size: nth($p2, 3)
-  @media #{$tablet}
-    font-size: nth($p2, 2)
+h1, h2, h3, h4, p
+  margin: 0
 
 // --- Typography colorz ---
 
 // Main
 
-h1, h2, h3, p
-  color: $rosso
+p
+  color: $gradient
 
-#div
-  h1, h2, h3, p
-    color: $rosso
+h1, h2, h4
+  color: $nero
 
 
 // <span> classes
 
-.bianco
-  color: $rosso !important
-
-.blu
-  color: $rosso !important
-
-.arancione
-  color: $rosso !important
+.gradient
+  color: $gradient !important
 
 // --- Links ---
 
-#Header
-  a:link, a:visited, a:active
-    color: $rosso
-    text-decoration: none
 
-#Header
-  a:hover
-    transition: 0.4 s
-    color: $blu
+a:link, a:visited, a:active
+  background: $nero
+  background-size: 200% auto
+
+  color: $nero
+  background-clip: text
+  text-fill-color: transparent
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  text-decoration: none
+
+
+
+.coloredLINK:hover
+  background: $gradient
+  background-size: 200% auto
+
+  color: #000
+  background-clip: text
+  text-fill-color: transparent
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
+  animation: shine 5s linear infinite
+  @keyframes shine
+    to
+      background-position: 200% center
 
 // --- --- --- Layout (margin, padding, width, height, background-color, ...)
 
 // --- Header
 
-#header
-  margin: 20px 10px 20px 10px
-  padding: 20px 10px 20px 10px
-  width: auto
-  height: auto
+#navROW
+  display: flex
 
-#logo img
-  width: nth($logo, 1)
-  @media #{$portrait}
-    width: nth($logo, 4)
-  @media #{$landscape}
-    width: nth($logo, 3)
-  @media #{$tablet}
-    width: nth($logo, 2)
-  height: auto
+.logoCOL, .menuCOL
+  width: 6%
+  padding-top: 20px
 
-#logo .style-svg // need SVG Support plugin (https://wordpress.org/plugins/svg-support/)
-  fill: $rosso
+.spaceCOL
+  width: 88%
+  height: 120px
+  background: transparent
+  position: fixed
 
-#logo .style-svg:hover
-  fill: $rosso
+.testoCOL
+  width: 88%
 
+.testoDIV
+  margin-top: 120px
+  background: $gradient
+  background-size: 200% auto
 
-// Slicknav
+  color: #000
+  background-clip: text
+  text-fill-color: transparent
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
 
-.slicknav_menu
-  display: none
-  @media #{$slicknav_breakpoint}
-    display: block
+  animation: shine 12s linear infinite
+  @keyframes shine
+    to
+      background-position: 200% center
 
-#menu
-  display: block
-  @media #{$slicknav_breakpoint}
-    display: none
+.menuCOL
+  display: flex
+  flex-grow: 1
+  flex-direction: column
 
-// Menu
+.logoCOL h1, .menuCOL h1
+  position: fixed
 
-.menu-item
-  display: inline-block
-  margin-left: 35px
-  border-bottom: 2px solid transparent
-  padding-bottom: 5px
-  transition: 0.4s
+.menuCOL h1
+  right: 16px
 
-.menu-item:hover
-  border-bottom: 2px solid white
+.socialCOL
+  position: fixed
+  right: 16px
+  bottom: 16px
+
+.menuCOL *
+  text-align: right
+
+#infoROW
+  margin-top: 200px
+
+#infoROW h3
+  margin-bottom: 35px
+
+#policyROW
+  margin-top: 50px
+  margin-bottom: 26px
+  display: flex
+
+#policyROW a
+  margin-right: 24px
+
 
 // --- Body
 
-#element1
-  margin: 20px 10px 20px 10px
-  padding: 20px 10px 20px 10px
-  width: auto
-  height: auto
 
 // --- Footer
 
-#footer
-  margin: 20px 10px 20px 10px
-  padding: 20px 10px 20px 10px
-  width: auto
-  height: auto
+// --- Layout adjust
 
-#logo2 img
-  width: nth($logo2, 1)
-  @media #{$portrait}
-    width: nth($logo2, 4)
-  @media #{$landscape}
-    width: nth($logo2, 3)
-  @media #{$tablet}
-    width: nth($logo2, 2)
-  height: auto
+body
+  margin: 0!important
+  padding: 0 16px 0px 16px
 
-.social_icon img
-  width: nth($icon, 1)
-  @media #{$portrait}
-    width: nth($icon, 4)
-  @media #{$landscape}
-    width: nth($icon, 3)
-  @media #{$tablet}
-    width: nth($icon, 2)
-  height: auto
 
-.social_icon .style-svg // need SVG Support plugin (https://wordpress.org/plugins/svg-support/)
-  fill: $rosso
+// --- Text gradient animation
 
-.social_icon .style-svg:hover
-  fill: $rosso
+.linear-wipe
+  -webkit-text-fill-color: transparent
+  -webkit-background-clip: text
