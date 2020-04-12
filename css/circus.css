@@ -55,6 +55,7 @@ h3, #infoROW a {
   font-size: 6vw;
   letter-spacing: 2px;
   font-weight: 500;
+  display: block;
 }
 
 @media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
@@ -73,6 +74,11 @@ h3, #infoROW a {
   h3, #infoROW a {
     font-size: 4vw;
   }
+}
+
+#infoROW a {
+  padding-top: 30px !important;
+  display: block;
 }
 
 h4 {
