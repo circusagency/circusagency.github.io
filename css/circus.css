@@ -1,3 +1,283 @@
+@import url(font-face.css);
 h1 {
-  font-size: 100px;
+  font-family: "Helvetica";
+  font-size: 5vw;
+}
+
+@media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
+  h1 {
+    font-size: 3vw;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 900px) and (orientation: landscape) {
+  h1 {
+    font-size: 2vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  h1 {
+    font-size: 4vw;
+  }
+}
+
+h2 {
+  font-family: "Helvetica";
+  font-size: 5vw;
+}
+
+@media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
+  h2 {
+    font-size: 3vw;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 900px) and (orientation: landscape) {
+  h2 {
+    font-size: 2vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  h2 {
+    font-size: 4vw;
+  }
+}
+
+h3 {
+  font-family: "Helvetica";
+  font-size: 5vw;
+}
+
+@media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
+  h3 {
+    font-size: 3vw;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 900px) and (orientation: landscape) {
+  h3 {
+    font-size: 2vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  h3 {
+    font-size: 4vw;
+  }
+}
+
+p {
+  font-family: "Times";
+  font-size: 5vw;
+}
+
+@media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
+  p {
+    font-size: 3vw;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 900px) and (orientation: landscape) {
+  p {
+    font-size: 2vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  p {
+    font-size: 4vw;
+  }
+}
+
+#div1 p {
+  font-family: "Times";
+  font-size: 5vw;
+}
+
+@media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
+  #div1 p {
+    font-size: 3vw;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 900px) and (orientation: landscape) {
+  #div1 p {
+    font-size: 2vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  #div1 p {
+    font-size: 4vw;
+  }
+}
+
+h1, h2, h3, p {
+  color: red;
+}
+
+#div h1, #div h2, #div h3, #div p {
+  color: red;
+}
+
+.bianco {
+  color: red !important;
+}
+
+.blu {
+  color: red !important;
+}
+
+.arancione {
+  color: red !important;
+}
+
+#Header a:link, #Header a:visited, #Header a:active {
+  color: red;
+  text-decoration: none;
+}
+
+#Header a:hover {
+  transition: 0.4 s;
+  color: blue;
+}
+
+#header {
+  margin: 20px 10px 20px 10px;
+  padding: 20px 10px 20px 10px;
+  width: auto;
+  height: auto;
+}
+
+#logo img {
+  width: 5vw;
+  height: auto;
+}
+
+@media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
+  #logo img {
+    width: 3vw;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 900px) and (orientation: landscape) {
+  #logo img {
+    width: 2vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  #logo img {
+    width: 4vw;
+  }
+}
+
+#logo .style-svg {
+  fill: red;
+}
+
+#logo .style-svg:hover {
+  fill: red;
+}
+
+.slicknav_menu {
+  display: none;
+}
+
+@media (min-width: 1px) and (max-width: 1024px) {
+  .slicknav_menu {
+    display: block;
+  }
+}
+
+#menu {
+  display: block;
+}
+
+@media (min-width: 1px) and (max-width: 1024px) {
+  #menu {
+    display: none;
+  }
+}
+
+.menu-item {
+  display: inline-block;
+  margin-left: 35px;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 5px;
+  transition: 0.4s;
+}
+
+.menu-item:hover {
+  border-bottom: 2px solid white;
+}
+
+#element1 {
+  margin: 20px 10px 20px 10px;
+  padding: 20px 10px 20px 10px;
+  width: auto;
+  height: auto;
+}
+
+#footer {
+  margin: 20px 10px 20px 10px;
+  padding: 20px 10px 20px 10px;
+  width: auto;
+  height: auto;
+}
+
+#logo2 img {
+  width: 5vw;
+  height: auto;
+}
+
+@media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
+  #logo2 img {
+    width: 3vw;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 900px) and (orientation: landscape) {
+  #logo2 img {
+    width: 2vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  #logo2 img {
+    width: 4vw;
+  }
+}
+
+.social_icon img {
+  width: 5vw;
+  height: auto;
+}
+
+@media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
+  .social_icon img {
+    width: 3vw;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 900px) and (orientation: landscape) {
+  .social_icon img {
+    width: 2vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  .social_icon img {
+    width: 4vw;
+  }
+}
+
+.social_icon .style-svg {
+  fill: red;
+}
+
+.social_icon .style-svg:hover {
+  fill: red;
 }
