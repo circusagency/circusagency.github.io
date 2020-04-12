@@ -19,6 +19,8 @@ $slicknav_breakpoint: "(min-width: 1px) and (max-width: 1024px)"
 
 $nero: black
 $gradient: linear-gradient(45deg, #fc00ff 20%, #00dbde 40%, #00dbde 60%, #fc00ff 80%)
+$gradient2: linear-gradient(45deg, #000000 20%, #000000 40%, #000000 60%, #000000 80%)
+
 
 
 // --- typography ---
@@ -30,3 +32,35 @@ $h3: (6vw 4vw 2vw 3vw 'Futura')
 $h4: (1.3vw 4vw 2vw 3vw 'Futura')
 
 $p1: (5vw 4vw 2vw 3vw 'Futura')
+
+@mixin gradient
+  background: linear-gradient(232deg, #ed2465, #3492ba, #1ed8ad, #ed2465)
+  background-size: 400% 400%
+
+  -webkit-animation: AnimationName 20s ease infinite
+  -moz-animation: AnimationName 20s ease infinite
+  animation: AnimationName 20s ease infinite
+
+@-webkit-keyframes AnimationName
+    0%
+      background-position: 0% 92%
+    50%
+      background-position: 100% 9%
+    100%
+      background-position: 0% 92%
+
+@-moz-keyframes AnimationName
+    0%
+      background-position: 0% 92%
+    50%
+      background-position: 100% 9%
+    100%
+      background-position: 0% 92%
+
+@keyframes AnimationName
+    0%
+      background-position: 0% 92%
+    50%
+      background-position: 100% 9%
+    100%
+      background-position: 0% 92%

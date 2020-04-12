@@ -1,4 +1,40 @@
 @import url(font-face.css);
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 92%;
+  }
+  50% {
+    background-position: 100% 9%;
+  }
+  100% {
+    background-position: 0% 92%;
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 92%;
+  }
+  50% {
+    background-position: 100% 9%;
+  }
+  100% {
+    background-position: 0% 92%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 92%;
+  }
+  50% {
+    background-position: 100% 9%;
+  }
+  100% {
+    background-position: 0% 92%;
+  }
+}
+
 h1 {
   font-family: "Futura";
   font-size: 1.7vw;
@@ -76,7 +112,7 @@ h3, #infoROW a {
   }
 }
 
-#infoROW a {
+#infoROW * {
   padding-top: 30px !important;
   display: block;
 }
@@ -140,36 +176,22 @@ h1, h2, h4 {
   color: black;
 }
 
-.gradient {
-  color: linear-gradient(45deg, #fc00ff 20%, #00dbde 40%, #00dbde 60%, #fc00ff 80%) !important;
-}
-
-a:link, a:visited, a:active {
-  background: black;
-  background-size: 200% auto;
-  color: black;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+#infoROW a:link, #infoROW a:active, #infoROW a:visited {
+  background: linear-gradient(45deg, #000000 20%, #000000 40%, #000000 60%, #000000 80%);
+  background-size: 400% auto;
+  background-clip: text !important;
+  text-fill-color: transparent !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
   text-decoration: none;
 }
 
-.coloredLINK:hover {
-  background: linear-gradient(45deg, #fc00ff 20%, #00dbde 40%, #00dbde 60%, #fc00ff 80%);
-  background-size: 200% auto;
-  color: #000;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 5s linear infinite;
-}
-
-@keyframes shine {
-  to {
-    background-position: 200% center;
-  }
+#infoROW a:hover {
+  background: linear-gradient(232deg, #ed2465, #3492ba, #1ed8ad, #ed2465);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 20s ease infinite;
+  -moz-animation: AnimationName 20s ease infinite;
+  animation: AnimationName 20s ease infinite;
 }
 
 #navROW {
@@ -194,20 +216,16 @@ a:link, a:visited, a:active {
 
 .testoDIV {
   margin-top: 120px;
-  background: linear-gradient(45deg, #fc00ff 20%, #00dbde 40%, #00dbde 60%, #fc00ff 80%);
-  background-size: 200% auto;
-  color: #000;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 12s linear infinite;
-}
-
-@keyframes shine {
-  to {
-    background-position: 200% center;
-  }
+  background-clip: text !important;
+  text-fill-color: transparent !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-decoration: none;
+  background: linear-gradient(232deg, #ed2465, #3492ba, #1ed8ad, #ed2465);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 20s ease infinite;
+  -moz-animation: AnimationName 20s ease infinite;
+  animation: AnimationName 20s ease infinite;
 }
 
 .menuCOL {
@@ -255,9 +273,4 @@ a:link, a:visited, a:active {
 body {
   margin: 0 !important;
   padding: 0 16px 0px 16px;
-}
-
-.linear-wipe {
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
 }

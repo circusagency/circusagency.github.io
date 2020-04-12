@@ -1,6 +1,7 @@
 @import font-face.css
 @import variables.sass
 
+
 // --- --- Typography --- ---
 
 // h1
@@ -44,7 +45,7 @@ h3, #infoROW a
   font-weight: 500
   display: block
 
-#infoROW a
+#infoROW *
   padding-top: 30px!important
   display: block
 
@@ -84,43 +85,24 @@ p
 h1, h2, h4
   color: $nero
 
-
-// <span> classes
-
-.gradient
-  color: $gradient !important
-
 // --- Links ---
 
 
-a:link, a:visited, a:active
-  background: $nero
-  background-size: 200% auto
-
-  color: $nero
-  background-clip: text
-  text-fill-color: transparent
-  -webkit-background-clip: text
-  -webkit-text-fill-color: transparent
-  text-decoration: none
 
 
+#infoROW
+  a:link, a:active, a:visited
+    background: $gradient2
+    background-size: 400% auto
+    background-clip: text!important
+    text-fill-color: transparent!important
+    -webkit-background-clip: text!important
+    -webkit-text-fill-color: transparent!important
+    text-decoration: none
 
-.coloredLINK:hover
-  background: $gradient
-  background-size: 200% auto
-
-  color: #000
-  background-clip: text
-  text-fill-color: transparent
-  -webkit-background-clip: text
-  -webkit-text-fill-color: transparent
-
-  animation: shine 5s linear infinite
-  @keyframes shine
-    to
-      background-position: 200% center
-
+#infoROW
+  a:hover
+    @include gradient
 // --- --- --- Layout (margin, padding, width, height, background-color, ...)
 
 // --- Header
@@ -143,19 +125,12 @@ a:link, a:visited, a:active
 
 .testoDIV
   margin-top: 120px
-  background: $gradient
-  background-size: 200% auto
-
-  color: #000
-  background-clip: text
-  text-fill-color: transparent
-  -webkit-background-clip: text
-  -webkit-text-fill-color: transparent
-
-  animation: shine 12s linear infinite
-  @keyframes shine
-    to
-      background-position: 200% center
+  background-clip: text!important
+  text-fill-color: transparent!important
+  -webkit-background-clip: text!important
+  -webkit-text-fill-color: transparent!important
+  text-decoration: none
+  @include gradient
 
 .menuCOL
   display: flex
@@ -204,7 +179,3 @@ body
 
 
 // --- Text gradient animation
-
-.linear-wipe
-  -webkit-text-fill-color: transparent
-  -webkit-background-clip: text
