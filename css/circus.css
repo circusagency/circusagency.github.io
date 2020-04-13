@@ -198,6 +198,11 @@ h1, h2, h4 {
   display: flex;
 }
 
+#navROW h1 {
+  margin-top: -20px;
+  opacity: 0;
+}
+
 .logoCOL, .menuCOL {
   width: 6%;
   padding-top: 20px;
@@ -226,6 +231,11 @@ h1, h2, h4 {
   -webkit-animation: AnimationName 20s ease infinite;
   -moz-animation: AnimationName 20s ease infinite;
   animation: AnimationName 20s ease infinite;
+}
+
+.testoDIV {
+  opacity: 0;
+  margin-top: 200px;
 }
 
 .menuCOL {
