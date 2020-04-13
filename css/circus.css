@@ -198,8 +198,7 @@ h1, h2, h4 {
   display: flex;
 }
 
-#navROW h1 {
-  margin-top: -20px;
+#navROW h1, #navROW h2 {
   opacity: 0;
 }
 
@@ -254,8 +253,8 @@ h1, h2, h4 {
 
 .socialCOL {
   position: fixed;
-  right: 16px;
-  bottom: 16px;
+  right: 20px;
+  bottom: 26px;
 }
 
 .menuCOL * {
@@ -282,5 +281,5 @@ h1, h2, h4 {
 
 body {
   margin: 0 !important;
-  padding: 0 16px 0px 16px;
+  padding: 0 20px 0px 20px;
 }

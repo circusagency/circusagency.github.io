@@ -1,3 +1,3 @@
 $(document).ready(function () {
-  $('#navROW h1').delay(1200).animate({"margin-top":"0px", "opacity":"1"}, 800, "swing");
+  $('#navROW h1, #navROW h2').delay(3000).animate({"opacity":"1"}, 800, "swing");
 });

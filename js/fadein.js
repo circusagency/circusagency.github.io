@@ -1,3 +1,3 @@
 $(document).ready(function () {
-  $('.testoDIV').delay(1000).animate({"margin-top":"120px", "opacity":"1"}, 1000, "swing");
+  $('.testoDIV').delay(800).animate({"margin-top":"120px", "opacity":"1"}, 2000, "swing");
 });
