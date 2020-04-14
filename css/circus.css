@@ -86,7 +86,7 @@ h2 {
   }
 }
 
-h3, #infoROW a {
+h3 {
   font-family: "Futura";
   font-size: 6vw;
   letter-spacing: 2px;
@@ -95,26 +95,21 @@ h3, #infoROW a {
 }
 
 @media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
-  h3, #infoROW a {
+  h3 {
     font-size: 3vw;
   }
 }
 
 @media (min-width: 480px) and (max-width: 900px) and (orientation: landscape) {
-  h3, #infoROW a {
+  h3 {
     font-size: 2vw;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
-  h3, #infoROW a {
+  h3 {
     font-size: 4vw;
   }
-}
-
-#infoROW * {
-  padding-top: 30px !important;
-  display: block;
 }
 
 h4 {
@@ -144,6 +139,7 @@ p {
   font-family: "Futura";
   font-size: 4.9vw;
   letter-spacing: 1.2px;
+  font-weight: bold;
 }
 
 @media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
@@ -166,6 +162,10 @@ p {
 
 h1, h2, h3, h4, p {
   margin: 0;
+}
+
+h1, h2, h3, h4 {
+  z-index: 2 !important;
 }
 
 p {
@@ -196,6 +196,7 @@ h1, h2, h4 {
 
 #navROW {
   display: flex;
+  padding: 0 20px;
 }
 
 #navROW h1, #navROW h2 {
@@ -207,11 +208,33 @@ h1, h2, h4 {
   padding-top: 20px;
 }
 
-.spaceCOL {
-  width: 88%;
-  height: 120px;
-  background: transparent;
+.menuCOL {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.logoCOL h1 {
   position: fixed;
+}
+
+.menuCOL h1 {
+  right: 16px;
+}
+
+.socialCOL {
+  position: fixed;
+  right: 20px;
+  bottom: 26px;
+  z-index: 2 !important;
+}
+
+.socialCOL * {
+  margin-bottom: 20px;
+}
+
+.menuCOL * {
+  text-align: right;
 }
 
 .testoCOL {
@@ -232,54 +255,22 @@ h1, h2, h4 {
   animation: AnimationName 20s ease infinite;
 }
 
-.testoDIV {
-  opacity: 0;
-  margin-top: 200px;
-}
-
-.menuCOL {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-}
-
-.logoCOL h1, .menuCOL h1 {
-  position: fixed;
-}
-
-.menuCOL h1 {
-  right: 16px;
-}
-
-.socialCOL {
-  position: fixed;
-  right: 20px;
-  bottom: 26px;
-}
-
-.menuCOL * {
-  text-align: right;
-}
-
 #infoROW {
   margin-top: 200px;
+  position: absolute;
+  z-index: 3;
+}
+
+#infoROW > * {
+  display: block;
 }
 
 #infoROW h3 {
-  margin-bottom: 35px;
-}
-
-#policyROW {
-  margin-top: 50px;
-  margin-bottom: 26px;
-  display: flex;
-}
-
-#policyROW a {
-  margin-right: 24px;
+  margin-bottom: 25px;
 }
 
 body {
   margin: 0 !important;
-  padding: 0 20px 0px 20px;
+  padding: 0;
+  background-color: #f2ffe994;
 }

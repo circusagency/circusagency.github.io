@@ -32,7 +32,7 @@ h2
   line-height: 36px
 
 // h3
-h3, #infoROW a
+h3
   font-family: nth($h3, 5)
   font-size: nth($h3, 1)
   @media #{$portrait}
@@ -43,10 +43,6 @@ h3, #infoROW a
     font-size: nth($h3, 2)
   letter-spacing: 2px
   font-weight: 500
-  display: block
-
-#infoROW *
-  padding-top: 30px!important
   display: block
 
 // h4
@@ -71,9 +67,13 @@ p
   @media #{$tablet}
     font-size: nth($p1, 2)
   letter-spacing: 1.2px
+  font-weight: bold
 
-h1, h2, h3, h4, p
+h1, h2, h3, h4, p,
   margin: 0
+
+h1, h2, h3, h4
+  z-index: 2!important
 
 // --- Typography colorz ---
 
@@ -103,12 +103,15 @@ h1, h2, h4
 #infoROW
   a:hover
     @include gradient
+
+
 // --- --- --- Layout (margin, padding, width, height, background-color, ...)
 
 // --- Header
 
 #navROW
   display: flex
+  padding: 0 20px
 
 #navROW
   h1, h2
@@ -118,11 +121,31 @@ h1, h2, h4
   width: 6%
   padding-top: 20px
 
-.spaceCOL
-  width: 88%
-  height: 120px
-  background: transparent
+.menuCOL
+  display: flex
+  flex-grow: 1
+  flex-direction: column
+
+.logoCOL h1
   position: fixed
+
+.menuCOL h1
+  right: 16px
+
+.socialCOL
+  position: fixed
+  right: 20px
+  bottom: 26px
+  z-index: 2!important
+
+.socialCOL *
+  margin-bottom: 20px
+
+.menuCOL *
+  text-align: right
+
+
+// --- Body
 
 .testoCOL
   width: 88%
@@ -137,53 +160,28 @@ h1, h2, h4
   @include gradient
 
 .testoDIV
-  opacity: 0
-  margin-top: 200px
+  //opacity: 0
+  //margin-top: 200px
 
-.menuCOL
-  display: flex
-  flex-grow: 1
-  flex-direction: column
-
-.logoCOL h1, .menuCOL h1
-  position: fixed
-
-.menuCOL h1
-  right: 16px
-
-.socialCOL
-  position: fixed
-  right: 20px
-  bottom: 26px
-
-.menuCOL *
-  text-align: right
+// --- Footer
 
 #infoROW
   margin-top: 200px
+  position: absolute
+  z-index: 3
+
+#infoROW > *
+  display: block
 
 #infoROW h3
-  margin-bottom: 35px
-
-#policyROW
-  margin-top: 50px
-  margin-bottom: 26px
-  display: flex
-
-#policyROW a
-  margin-right: 24px
-
-
-// --- Body
-
-
-// --- Footer
+  margin-bottom: 25px
 
 // --- Layout adjust
 
 body
   margin: 0!important
-  padding: 0 20px 0px 20px
+  padding: 0
+  background-color: #f2ffe994
 
 
 // --- Text gradient animation
