@@ -137,26 +137,26 @@ h4 {
 
 p {
   font-family: "Futura";
-  font-size: 4.9vw;
+  font-size: 9vw;
   letter-spacing: 1.2px;
   font-weight: bold;
 }
 
 @media (min-width: 1px) and (max-width: 479px) and (orientation: portrait) {
   p {
-    font-size: 3vw;
+    font-size: 9vw;
   }
 }
 
 @media (min-width: 480px) and (max-width: 900px) and (orientation: landscape) {
   p {
-    font-size: 2vw;
+    font-size: 9vw;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
   p {
-    font-size: 4vw;
+    font-size: 9vw;
   }
 }
 
@@ -248,11 +248,7 @@ h1, h2, h4 {
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   text-decoration: none;
-  background: linear-gradient(232deg, #ed2465, #3492ba, #1ed8ad, #ed2465);
-  background-size: 400% 400%;
-  -webkit-animation: AnimationName 20s ease infinite;
-  -moz-animation: AnimationName 20s ease infinite;
-  animation: AnimationName 20s ease infinite;
+  background-color: black;
 }
 
 #infoROW {
@@ -272,5 +268,5 @@ h1, h2, h4 {
 body {
   margin: 0 !important;
   padding: 0;
-  background-color: #f2ffe994;
+  background-color: #f7f0cfcf;
 }
