@@ -2,6 +2,8 @@
 @import variables.sass
 
 
+
+
 // --- --- Typography --- ---
 
 // h1
@@ -76,8 +78,6 @@ h1, h2, h3, h4
   z-index: 2!important
 
 // --- Typography colorz ---
-
-// Main
 
 p
   color: $gradient
@@ -160,9 +160,6 @@ h1, h2, h4
   //@include gradient
   background-color: black
 
-.testoDIV
-  //opacity: 0
-  //margin-top: 200px
 
 // --- Footer
 
@@ -182,7 +179,22 @@ h1, h2, h4
 body
   margin: 0!important
   padding: 0
-  background-color: #f7f0cfcf
+  background-color: $ocra
 
 
-// --- Text gradient animation
+// --- Particleground css
+
+.intro
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  margin-top: 0
+
+#particles
+  canvas
+    position: fixed
+    opacity: 0.3
+  width: 100vw
+  height: 100vh
+  overflow: hidden
